@@ -1,0 +1,51 @@
+.formbasic input[type=submit] {
+	background-color: white;
+	border: 1px solid red;
+	padding: 5px;
+	color:red;
+	border-radius: 2px;
+	transition: all 0.5s ease;
+  }
+  .formbasic input[type=submit]:hover {
+	background-color: red;
+	color:white;
+	border-radius: 150px;
+  }
+.inputbasic {
+	border: 1px solid rgb(95, 92, 92);
+	border-radius: 3px;
+	padding: 5px;
+	font-style: italic;
+	font-family: Tahoma;
+}
+.inputbasic:hover{
+	background-color: lightgreen;
+	color: rgb(0, 0, 0);
+}
+.pseudo {
+  background-image: url('pseudo.png');
+  background-repeat: no-repeat;
+  background-position: 4px 7px;
+  background-size: 25px;
+  padding-left: 40px;
+}
+.password {
+  background-image: url('password.png');
+  background-repeat: no-repeat;
+  background-position: 4px 2px;
+  background-size: 25px;
+  padding-left: 40px;
+}
+.email {
+  background-image: url('mail.png');
+  background-repeat: no-repeat;
+  background-position: 4px 7px;
+  background-size: 25px;
+  padding-left: 40px;
+}
+body {
+	background: #c0c0c0;
+}
+.formbasic{
+	text-align: center;
+}

@@ -2,20 +2,28 @@
 <html>
 
     <head>
-        <title>In_Forum Accueil</title>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="../Vue/Style2.css" />
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <title>Auto-Route</title>
     </head>
 
     <body>
+
         <! -- le logo du site -->
         <img src="" style="height:400px; strong:left;margin:0 10px 0 600px;">
+
         <! -- Texte de bienvenue -->
         <h1 align="center"> Bienvenue sur Auto-Route !<h1>
 
         <! -- Boutton qui va vers la déconnexion -->
-        <a href="déco.php"><input type="button" value="Déconnexion" style="width:130px; strong:left;margin:0 10px 0 400px;"></a>
+        <form action="../Controleur/deconnexion.php" method="post">   
+            <input type="submit" name="action"value="deconnexion">
+        </form>
 
         <! -- Boutton qui va vers le profil -->
-        <a href="profil.php"><input type="button" value="Profil" style="width:130px; strong:left;margin:0 10px 0 400px;"></a>
+        <a href="../Vue/profil.php"><input class ="inputbasic" type="button" value="Profil" style="width:130px; strong:left;margin:0 10px 0 400px;"></a>
+
     </body>
 
 </html>
