@@ -1,6 +1,6 @@
 <?php
 
-    include('../Modèle/bdd_Connect.php');
+    include('../Modele/bdd_Connect.php');
     $req = $bdd->prepare('SELECT idUser, passwordUser FROM User WHERE nameUser = :nameUser');
     $req->execute(array(
         'nameUser' => $_POST['nameUser']));

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <?php
 	session_start();
-	include "../Modèle/bdd_Connect.php";
+	include "../Modele/bdd_Connect.php";
 ?>
 <html>
 	<head>

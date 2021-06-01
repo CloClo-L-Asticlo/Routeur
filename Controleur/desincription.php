@@ -1,5 +1,5 @@
 <?php
-    include('../Modèle/bdd_Connect.php');
+    include('../Modele/bdd_Connect.php');
     session_start();
     $req = $bdd->prepare("DELETE * FROM User WHERE idUser = :idUser");
         $req->execute(array(
