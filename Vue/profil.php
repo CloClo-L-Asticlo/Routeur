@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <?php
 	session_start();
-	include "../Modele/Modele_bdd_connect.php";
+	include "../Modèle/bdd_Connect.php";
 ?>
 <html>
 	<head>
@@ -10,22 +10,22 @@
 	</head>
 
 	<body>
-        <form  class="formbasic" action="../Control/Control_compte.php" method="POST">
+        <form  class="formbasic" action="../Controleur/compte.php" method="POST">
 		<?php
-			$rep = $bdd->query("SELECT * FROM user WHERE iduser =". $_SESSION['iduser']);
+			$rep = $bdd->query("SELECT * FROM User WHERE idUser =". $_SESSION['idUser']);
                 while ($donnees = $rep->fetch()){
-                    if (isset($donnees['pseudo']) ) { 
-						echo "pseudo: <input  class=\"inputbasic pseudo\"type=\"text\"name=\"pseudo\"value=\"" . $donnees['pseudo'] . "\"minlength=\"1\"><br><br>";
-						echo "mail: <input class=\"inputbasic email\" type=\"email\"name=\"email\"value=\"" . $donnees['email'] . "\"minlength=\"1\"><br><br>";
-        				echo "mot de passe: <input class=\"inputbasic password\" type=\"password\"name=\"pwd\" minlength=\"6\"><br><br>";
+                    if (isset($donnees['nameUser']) ) { 
+						echo "pseudo: <input  class=\"inputbasic nameUser\"type=\"text\"name=\"pseudo\"value=\"" . $donnees['nameUser'] . "\"minlength=\"1\"><br><br>";
+						echo "email: <input class=\"inputbasic emailUser\" type=\"email\"name=\"email\"value=\"" . $donnees['email'] . "\"minlength=\"1\"><br><br>";
+        				echo "mot de passe: <input class=\"inputbasic passwordUser\" type=\"password\"name=\"passwordUser\" minlength=\"6\"><br><br>";
 					}
 				}
 		?>
-			<input type='hidden' name='iduser' value="<?php echo $_SESSION['iduser']?>">
+			<input type='hidden' name='idUser' value="<?php echo $_SESSION['idUser']?>">
 			<input type='hidden' name='action' value='modifier'>
 			<input class="button" type="submit" name="action" value="Modifier"><br><br>
         </form>
-		<form  class="formbasic"action="View_accueil.php" method="post">   
+		<form  class="formbasic"action="accueil.html" method="post">   
             <input type="submit" value="Retour">
         </form>
 	</body>

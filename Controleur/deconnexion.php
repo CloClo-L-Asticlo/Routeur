@@ -1,9 +1,9 @@
 <?php
     session_start();
-    include "../Modele/Modele_bdd_connect.php";
+    include "../Modèle/bdd_Connect.php";
     if ($_POST["action"] == "deconnexion") {
         session_destroy();
         //afficher la view
-        header("Location: ../View/View_login.php");          
+        header("Location: ../Vue/connexion.html");          
     }
 ?>
