@@ -2,28 +2,32 @@
 <html>
 
     <head>
-        <meta charset="utf-8" />
-        <link rel="stylesheet" href="../Vue/Style2.css" />
+        <title>Acceuil-routage</title>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-        <title>Auto-Route</title>
+        
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
     </head>
 
     <body>
-
-        <! -- le logo du site -->
+        <!-- le logo du site -->
         <img src="" style="height:400px; strong:left;margin:0 10px 0 600px;">
-
-        <! -- Texte de bienvenue -->
+        <!-- Texte de bienvenue -->
         <h1 align="center"> Bienvenue sur Auto-Route !<h1>
 
-        <! -- Boutton qui va vers la déconnexion -->
-        <form action="../Controleur/deconnexion.php" method="post">   
-            <input type="submit" name="action"value="deconnexion">
+        <!-- Boutton qui va vers la déconnexion -->
+        <a href="déco.php"><input class="box-button" type="button" value="Déconnexion" style="width:130px; strong:left;margin:0 10px 0 400px;"></a>
+
+        <!-- Boutton qui va vers le profil -->
+        <a href="profil.php"><input type="button" value="Profil" style="width:130px; strong:left;margin:0 10px 0 400px;"></a>
+        <form class="box" action="../Controleur/acceuil.php" method="POST">
+                <input type="text" class="box-input" name="machine_d" placeholder="Machine de départ" required /><br>
+                <input type="text" class="box-input" name="chemin" placeholder="Chemin" required /><br>
+                <input type="text" class="box-input" name="saut" placeholder="Premier saut" required /><br>
+                <input type="submit" name="valide" value="Validé" class="box-button" />
+
         </form>
-
-        <! -- Boutton qui va vers le profil -->
-        <a href="../Vue/profil.php"><input class ="inputbasic" type="button" value="Profil" style="width:130px; strong:left;margin:0 10px 0 400px;"></a>
-
     </body>
 
 </html>
+
