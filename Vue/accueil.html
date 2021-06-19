@@ -21,22 +21,24 @@
     <body>
         <!-- le logo du site -->
         <img src="" style="height:400px; strong:left;margin:0 10px 0 600px;">
+        
         <!-- Texte de bienvenue -->
         <h1 align="center"> Bienvenue sur Auto-Route !<h1>
 
         <!-- Boutton qui va vers la déconnexion -->
-<form action="../Controleur/deconnexion.php" method="post">   
+        <form action="../Controleur/deconnexion.php" method="post">   
             <input type="submit" name="action"value="deconnexion">
         </form>
 
         <!-- Boutton qui va vers le profil -->
         <a href="profil.php"><input type="button" value="Profil" style="width:130px; strong:left;margin:0 10px 0 400px;"></a>
+        
+        <!-- Formulaire -->
         <form class="box" action="../Controleur/routage.php" method="POST">
-                <input type="text" class="box-input" name="machine_d" placeholder="Machine de départ" required /><br>
-                <input type="text" class="box-input" name="chemin" placeholder="Chemin" required /><br>
-                <input type="text" class="box-input" name="saut" placeholder="Premier saut" required /><br>
+                <input type="text" class="box-input" name="chemin" placeholder="Chemin" minlegth="9" maxlenght="19" required /><br>
+                <input type="text" class="box-input" name="saut" placeholder="Premier saut" minlegth="7" maxlenght="15" required /><br>
+                <input type="text" class="box-input" name="ens" placeholder="ens" minlegth="4" required /><br>
                 <input type="submit" name="valide" value="Validé" class="box-button" />
-
         </form>
     </body>
 
