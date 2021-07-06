@@ -1,3 +1,17 @@
-.container{
-	background-color: #84D68A;
+.container
+{
+        align-items: center;
+        justify-content: center;
+        background-color: #84D68A;
+        height: 500px;
+        width: 800px;
+        font-family: 'Audiowide', cursive;
+}
+.header{
+        color: #ffff8A;
+        width: 100%;
+}
+.routage{
+        background-color: #ffffff;
+        width: 100%;
 }
